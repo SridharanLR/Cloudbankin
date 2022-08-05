@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cloudbankin</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./font/font.css" />
+  </head>
+  <body>
+    <div class="bgimg">
+      <div class="header">
+        <i class="fa-solid fa-align-left hamburger"></i>
+        <div class="logo-left">
+          <div>CB</div>
+          <p>Cloudbankin</p>
+        </div>
+        <div class="logo-right">
+          <div>GC</div>
+          <p>Gregory Clark</p>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+      </div>
+
+      <!-- container -->
+      <div class="container">
+        <!-- slider -->
+        <div class="slider-sec">
+          <div class="slider">
+            <div id="slide1" onclick="onTab('1')" class="one">
+              <div class="slide sli1 sli">1</div>
+              <p class="act active">Borrower Company Info</p>
+            </div>
+
+            <div
+              id="slide2"
+              ondblclick="on()"
+              onclick="onTab('2')"
+              class="two bg"
+            >
+              <div class="slide sli2">2</div>
+              <p class="deactive act active">Director Info</p>
+            </div>
+
+            <div id="slide3" onclick="onTab('3')" class="three bg">
+              <div class="slide">3</div>
+              <p class="deactive">Financial Info</p>
+            </div>
+
+            <div id="slide4" onclick="onTab('4')" class="four bg">
+              <div class="slide">4</div>
+              <p class="deactive">Past Performance deatails</p>
+            </div>
+
+            <div id="slide5" onclick="onTab('5')" class="five bg">
+              <div class="slide">5</div>
+              <p class="deactive">Document Upload</p>
+            </div>
+
+            <div id="dot1" class="dot1 dot">
+              <nav>
+                <i class="fa-solid fa-circle clr"></i>
+                <i class="fa-solid fa-circle clr"></i>
+                <i class="fa-solid fa-circle clr"></i>
+                <i class="fa-solid fa-circle clr"></i>
+                <i class="fa-solid fa-circle clr"></i>
+                <i class="fa-solid fa-circle clr"></i>
+                <i class="fa-solid fa-circle clr"></i>
+                <i class="fa-solid fa-circle clr"></i>
+                <i class="fa-solid fa-circle clr"></i>
+                <i class="fa-solid fa-circle clr"></i>
+                <i class="fa-solid fa-circle clr"></i>
+              </nav>
+            </div>
+
+            <div class="dot2 dot">
+              <nav id="dot2" class="color">
+                <i class="fa-solid fa-circle"></i>
+                <i class="fa-solid fa-circle"></i>
+                <i class="fa-solid fa-circle"></i>
+                <i class="fa-solid fa-circle"></i>
+                <i class="fa-solid fa-circle"></i>
+                <i class="fa-solid fa-circle"></i>
+                <i class="fa-solid fa-circle"></i>
+                <i class="fa-solid fa-circle"></i>
+                <i class="fa-solid fa-circle"></i>
+                <i class="fa-solid fa-circle"></i>
+                <i class="fa-solid fa-circle"></i>
+              </nav>
+            </div>
+
+            <div class="dot3 dot">
+              <nav id="dot3" class="color">
+                <i class="fa-solid fa-circle"></i>
+                <i class="fa-solid fa-circle"></i>
+                <i class="fa-solid fa-circle"></i>
+                <i class="fa-solid fa-circle"></i>
+                <i class="fa-solid fa-circle"></i>
+                <i class="fa-solid fa-circle"></i>
+                <i class="fa-solid fa-circle"></i>
+                <i class="fa-solid fa-circle"></i>
+                <i class="fa-solid fa-circle"></i>
+                <i class="fa-solid fa-circle"></i>
+                <i class="fa-solid fa-circle"></i>
+              </nav>
+            </div>
+
+            <div class="dot4 dot">
+              <nav id="dot4" class="color">
+                <i class="fa-solid fa-circle"></i>
+                <i class="fa-solid fa-circle"></i>
+                <i class="fa-solid fa-circle"></i>
+                <i class="fa-solid fa-circle"></i>
+                <i class="fa-solid fa-circle"></i>
+                <i class="fa-solid fa-circle"></i>
+                <i class="fa-solid fa-circle"></i>
+                <i class="fa-solid fa-circle"></i>
+                <i class="fa-solid fa-circle"></i>
+                <i class="fa-solid fa-circle"></i>
+                <i class="fa-solid fa-circle"></i>
+              </nav>
+            </div>
+          </div>
+        </div>
+
+        <!-- contents -->
+
+        <div class="content">
+          <div class="cnt">
+            <div id="1" class="barrower">
+              <h3>Borrower Company Info</h3>
+              <div class="inputs">
+                <div class="name field">
+                  <div>
+                    <label for="name">Property Name</label>
+                    <span class="fa-solid fa-circle-info"></span>
+                  </div>
+                  <div>
+                    <input
+                      type="text"
+                      placeholder="Property Name"
+                      name="name"
+                    />
+                  </div>
+                </div>
+                <div class="type field">
+                  <div>
+                    <label for="type">Property Type</label>
+                  </div>
+                  <div>
+                    <select name="type" id="type">
+                      <option hidden>Property Type</option>
+                      <option>OWN</option>
+                      <option>Rented</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="unit field">
+                  <div>
+                    <label for="unit">Number of Units</label>
+                  </div>
+                  <div>
+                    <select name="type" id="type">
+                      <option hidden>Number of Units</option>
+                      <option>1</option>
+                      <option>2</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="txtarea">
+                <div>
+                  <label for="addres">Property Addres</label>
+                  <textarea
+                    name="addres"
+                    id=""
+                    cols="30"
+                    rows="5"
+                    placeholder="Enter Borrower name"
+                  ></textarea>
+                </div>
+
+                <div class="file-attach">
+                  <div>
+                    <label for="file">File Attachment</label>
+                    <div class="drag-box">
+                      <p>
+                        <span style="color: blue">Browse</span> or Drag & drop
+                        to Attach a file
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Director Info -->
+
+            <div id="2" class="director dNone">
+              <h3>Director Info</h3>
+              <div class="inputs">
+                <div class="name field">
+                  <div>
+                    <label for="name">Property Name</label>
+                    <span class="fa-solid fa-circle-info"></span>
+                  </div>
+                  <div>
+                    <input
+                      type="text"
+                      placeholder="Property Name"
+                      name="name"
+                    />
+                  </div>
+                </div>
+                <div class="type field">
+                  <div>
+                    <label for="type">Property Type</label>
+                  </div>
+                  <div>
+                    <select name="type" id="type">
+                      <option hidden>Property Type</option>
+                      <option>OWN</option>
+                      <option>Rented</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="unit field">
+                  <div>
+                    <label for="unit">Number of Units</label>
+                  </div>
+                  <div>
+                    <select
+                      name="type"
+                      id="type"
+                      aria-placeholder="Property Type"
+                    >
+                      <option hidden>Number of Units</option>
+                      <option>1</option>
+                      <option>2</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="txtarea">
+                <div>
+                  <label for="addres">Property Addres</label>
+                  <textarea
+                    name="addres"
+                    id=""
+                    cols="30"
+                    rows="5"
+                    placeholder="Enter Borrower name"
+                  ></textarea>
+                </div>
+
+                <div class="file-attach">
+                  <div>
+                    <label for="file">File Attachment</label>
+                    <div class="drag-box">
+                      <p>
+                        <span style="color: blue">Browse</span> or Drag & drop
+                        to Attach a file
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="3" class="financial dNone">
+              <h3>Financial Info</h3>
+              <div class="inputs">
+                <div class="name field">
+                  <div>
+                    <label for="name">Property Name</label>
+                    <span class="fa-solid fa-circle-info"></span>
+                  </div>
+                  <div>
+                    <input
+                      type="text"
+                      placeholder="Property Name"
+                      name="name"
+                    />
+                  </div>
+                </div>
+                <div class="type field">
+                  <div>
+                    <label for="type">Property Type</label>
+                  </div>
+                  <div>
+                    <select name="type" id="type">
+                      <option hidden>Property Type</option>
+                      <option>OWN</option>
+                      <option>Rented</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="unit field">
+                  <div>
+                    <label for="unit">Number of Units</label>
+                  </div>
+                  <div>
+                    <select
+                      name="type"
+                      id="type"
+                      aria-placeholder="Property Type"
+                    >
+                      <option hidden>Number of Units</option>
+                      <option>1</option>
+                      <option>2</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="txtarea">
+                <div>
+                  <label for="addres">Property Addres</label>
+                  <textarea
+                    name="addres"
+                    id=""
+                    cols="30"
+                    rows="5"
+                    placeholder="Enter Borrower name"
+                  ></textarea>
+                </div>
+
+                <div class="file-attach">
+                  <div>
+                    <label for="file">File Attachment</label>
+                    <div class="drag-box">
+                      <p>
+                        <span style="color: blue">Browse</span> or Drag & drop
+                        to Attach a file
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="4" class="performance dNone">
+              <h3>Past performance deatails</h3>
+              <div class="inputs">
+                <div class="name field">
+                  <div>
+                    <label for="name">Property Name</label>
+                    <span class="fa-solid fa-circle-info"></span>
+                  </div>
+                  <div>
+                    <input
+                      type="text"
+                      placeholder="Property Name"
+                      name="name"
+                    />
+                  </div>
+                </div>
+                <div class="type field">
+                  <div>
+                    <label for="type">Property Type</label>
+                  </div>
+                  <div>
+                    <select name="type" id="type">
+                      <option hidden>Property Type</option>
+                      <option>OWN</option>
+                      <option>Rented</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="unit field">
+                  <div>
+                    <label for="unit">Number of Units</label>
+                  </div>
+                  <div>
+                    <select
+                      name="type"
+                      id="type"
+                      aria-placeholder="Property Type"
+                    >
+                      <option hidden>Number of Units</option>
+                      <option>1</option>
+                      <option>2</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="txtarea">
+                <div>
+                  <label for="addres">Property Addres</label>
+                  <textarea
+                    name="addres"
+                    id=""
+                    cols="30"
+                    rows="5"
+                    placeholder="Enter Borrower name"
+                  ></textarea>
+                </div>
+
+                <div class="file-attach">
+                  <div>
+                    <label for="file">File Attachment</label>
+                    <div class="drag-box">
+                      <p>
+                        <span style="color: blue">Browse</span> or Drag & drop
+                        to Attach a file
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="5" class="upload dNone">
+              <h3>Document Upload</h3>
+              <div class="inputs">
+                <div class="name field">
+                  <div>
+                    <label for="name">Property Name</label>
+                    <span class="fa-solid fa-circle-info"></span>
+                  </div>
+                  <div>
+                    <input
+                      type="text"
+                      placeholder="Property Name"
+                      name="name"
+                    />
+                  </div>
+                </div>
+                <div class="type field">
+                  <div>
+                    <label for="type">Property Type</label>
+                  </div>
+                  <div>
+                    <select name="type" id="type">
+                      <option hidden>Property Type</option>
+                      <option>OWN</option>
+                      <option>Rented</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="unit field">
+                  <div>
+                    <label for="unit">Number of Units</label>
+                  </div>
+                  <div>
+                    <select
+                      name="type"
+                      id="type"
+                      aria-placeholder="Property Type"
+                    >
+                      <option hidden>Number of Units</option>
+                      <option>1</option>
+                      <option>2</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="txtarea">
+                <div>
+                  <label for="addres">Property Addres</label>
+                  <textarea
+                    name="addres"
+                    id=""
+                    cols="30"
+                    rows="5"
+                    placeholder="Enter Borrower name"
+                  ></textarea>
+                </div>
+
+                <div class="file-attach">
+                  <div>
+                    <label for="file">File Attachment</label>
+                    <div class="drag-box">
+                      <p>
+                        <span style="color: blue">Browse</span> or Drag & drop
+                        to Attach a file
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- footer -->
+
+        <div class="footer">
+          <div class="btn">
+            <button onclick="forward()">Continue</button>
+            <button onclick="backward()">Back</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./index.js"></script>
+</html>
